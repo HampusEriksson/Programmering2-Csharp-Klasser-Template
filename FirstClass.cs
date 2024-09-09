@@ -6,9 +6,9 @@ namespace FirstClass
     public class ClassName
     {
         // Attribut (egenskaper)
-        public string Attribute1 { get; set; }
-        public int Attribute2 { get; set; }
-        public bool Attribute3 { get; set; }
+        private string Attribute1;
+        private int Attribute2;
+        private bool Attribute3;
 
         // Konstruktor
         public ClassName(string attribute1, int attribute2, bool attribute3)
@@ -24,7 +24,14 @@ namespace FirstClass
             return $"Attribute1: {Attribute1}, Attribute2: {Attribute2}, Attribute3: {Attribute3}";
         }
 
-        // En valfri metod
+        // En  metod
+        public void AMethod()
+        {
+            // Implementera metodens funktionalitet här
+            Console.WriteLine("Denna metod gör något!");
+        }
+
+        // En annan  metod
         public void AnotherMethod()
         {
             // Implementera metodens funktionalitet här
@@ -37,14 +44,7 @@ namespace FirstClass
     {
         static void Main(string[] args)
         {
-            // Skapa ett objekt av klassen ClassName
-            ClassName obj = new ClassName("Värde1", 42, true);
-
-            // Anropa ToString-metoden
-            Console.WriteLine(obj.ToString());
-
-            // Anropa den valfria metoden
-            obj.AnotherMethod();
+            // Skapa ett objekt av din nya klass och kalla på metoder
         }
     }
 }
